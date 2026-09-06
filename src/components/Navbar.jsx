@@ -37,7 +37,7 @@ function Navbar() {
           </li>
 
           <li className="hover:text-blue-500 hover:underline underline-offset-8">
-            <a href="#skills">Skills</a>
+            <a href="#about">Skills</a>
           </li>
 
           <li className="hover:text-blue-500 hover:underline underline-offset-8">

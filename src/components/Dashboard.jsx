@@ -33,9 +33,9 @@ function Dashboard() {
 
   return (
     <>
-      <div className="h-[calc(100vh-60px)] flex items-center justify-between px-12 bg-linear-to-r from-[#0B1120] to-[#1e3b8a] text-white">
+      <div id="home"className="h-[calc(100vh-60px)] flex items-center justify-between px-12 bg-linear-to-r from-[#0B1120] to-[#1e3b8a] text-white  scroll-mt-15">
         {/* <h3 className="text-5xl text-white opacity-10">this is a dashboard</h3> */}
-        <div id="home" className="home-section">
+        <div>
           <h3 className="text-2xl text-blue-400" data-aos="fade-up">
             Hello, I'm
           </h3>
@@ -127,16 +127,16 @@ function Dashboard() {
         </div>
       </div>
       <div
-        className="about-skills-todo grid grid-cols-1 lg:grid-cols-3 text-white bg-[#1a243b] px-12 py-10"
+        className="about-skills-todo grid grid-cols-1 lg:grid-cols-3 text-white bg-[#1a243b] px-12 py-10 scroll-mt-15"
         id="about"
       >
         <div
           id="about"
-          className="about-section border-e border-white/10 px-10 gap-4 flex flex-col"
+          className="about-section border-e border-white/10 px-10 gap-4 flex flex-col "
         >
           <h2 className="text-2xl font-semibold ">About Me</h2>
           <p className="">
-            I am a pagit branch -M mainssionate MERN Stack developer who loves
+            I am a passionate MERN Stack developer who loves
             turning ideas into real-world applications. I enjoy solving
             problems, writing clean code and learning new technologies.
           </p>
@@ -171,7 +171,7 @@ function Dashboard() {
           </button>
         </div>
         <div
-          id="skills"
+          id="about"
           className="skills-section border-e border-white/10 px-10  "
         >
           <h3 className="text-2xl font-semibold ">My Skills </h3>
@@ -262,7 +262,7 @@ function Dashboard() {
       </div>
       <div
         id="projects"
-        className="myprojects-section  bg-[#0B1120] text-white  px-12 py-10 flex flex-col"
+        className="myprojects-section  bg-[#0B1120] text-white  px-12 py-10 flex flex-col scroll-mt-15"
       >
         <h2 className="text-3xl font-semibold text-center">My Projects</h2>
         {/* <div className="project-container "> */}
@@ -290,8 +290,12 @@ function Dashboard() {
               </div>
             </div>
             <div className="flex justify-between mt-1 ">
-              <a href="https://diyabora.github.io/TravelX/" target="_blank">Live Demo</a>
-              <a href="https://github.com/diyabora/TravelX" target="_blank">GitHub</a>
+              <a href="https://diyabora.github.io/TravelX/" target="_blank">
+                Live Demo
+              </a>
+              <a href="https://github.com/diyabora/TravelX" target="_blank">
+                GitHub
+              </a>
             </div>
           </div>
           <div
@@ -319,8 +323,11 @@ function Dashboard() {
               <a href="https://boootstrapclone.netlify.app/" target="_blank">
                 Live Demo
               </a>
-              <a href="https://github.com/diyabora/bootstrap_clone" target="_blank">
-              GitHub
+              <a
+                href="https://github.com/diyabora/bootstrap_clone"
+                target="_blank"
+              >
+                GitHub
               </a>
             </div>
           </div>
@@ -349,8 +356,18 @@ function Dashboard() {
               </div>
             </div>
             <div className="flex justify-between mt-1 ">
-              <a href="https://librarymanagementdiya.netlify.app/" target="_blank">Live Demo</a>
-              <a href="https://github.com/diyabora/library_management" target="_blank">GitHub</a>
+              <a
+                href="https://librarymanagementdiya.netlify.app/"
+                target="_blank"
+              >
+                Live Demo
+              </a>
+              <a
+                href="https://github.com/diyabora/library_management"
+                target="_blank"
+              >
+                GitHub
+              </a>
             </div>
           </div>
           <div
@@ -389,7 +406,10 @@ function Dashboard() {
           </button>
         </div>
       </div>
-      <div className=" bg-[#1a243b] grid lg:grid-cols-2 text-white px-12 ">
+      <div
+        id="education"
+        className=" bg-[#1a243b] grid lg:grid-cols-2 text-white px-12  scroll-mt-15 "
+      >
         <div className="experience-section border-e border-r-white/10 px-5 ">
           <h3 className="text-3xl font-semibold py-10">Experiece</h3>
           <p className="text-xl font-semibold">Fresher</p>
@@ -450,7 +470,7 @@ function Dashboard() {
           </div>
         </div>
       </div>
-      <div className="getIntouch h-fit-content grid lg:grid-cols-3  text-white bg-[#0B1120] px-16 py-14 ">
+      <div className="getIntouch h-fit-content grid lg:grid-cols-3  text-white bg-[#0B1120] px-16 py-14  ">
         <div className="details  flex flex-col gap-3">
           <h3 className="text-3xl font-semibold">Get In Touch</h3>
           <p className="text-lg">
