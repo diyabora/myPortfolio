@@ -33,7 +33,10 @@ function Dashboard() {
 
   return (
     <>
-      <div id="home"className="h-[calc(100vh-60px)] flex items-center justify-between px-12 bg-linear-to-r from-[#0B1120] to-[#1e3b8a] text-white  scroll-mt-15">
+      <div
+        id="home"
+        className="h-[calc(100vh-60px)] flex items-center justify-between px-12 bg-linear-to-r from-[#0B1120] to-[#1e3b8a] text-white  scroll-mt-15"
+      >
         {/* <h3 className="text-5xl text-white opacity-10">this is a dashboard</h3> */}
         <div>
           <h3 className="text-2xl text-blue-400" data-aos="fade-up">
@@ -134,11 +137,16 @@ function Dashboard() {
           id="about"
           className="about-section border-e border-white/10 px-10 gap-4 flex flex-col "
         >
-          <h2 className="text-2xl font-semibold ">About Me</h2>
-          <p className="">
-            I am a passionate MERN Stack developer who loves
-            turning ideas into real-world applications. I enjoy solving
-            problems, writing clean code and learning new technologies.
+          <div>
+            <h2 className="relative text-2xl font-semibold ">
+              About Me
+              <span className="absolute h-[3px] w-8 left-0 bg-cyan-400 bottom-[-10px]"></span>
+            </h2>
+          </div>
+          <p className="pt-3">
+            I am a passionate MERN Stack developer who loves turning ideas into
+            real-world applications. I enjoy solving problems, writing clean
+            code and learning new technologies.
           </p>
           <p className="text-md flex items-center gap-2">
             <span className="text-2xl text-blue-600">
@@ -166,33 +174,45 @@ function Dashboard() {
             </span>
             Freelance: Available
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md w-fit cursor-pointer">
+          {/* <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md w-fit cursor-pointer">
             More About Me
-          </button>
+          </button> */}
         </div>
         <div
           id="about"
           className="skills-section border-e border-white/10 px-10  "
         >
-          <h3 className="text-2xl font-semibold ">My Skills </h3>
-          {skills.map((items, index) => (
-            <div className="skills-list " key={index}>
-              <div className="flex justify-between mt-4">
-                <p>{items.name}</p>
-                <p>{items.percentage}%</p>
+          <div>
+            <h2 className="relative text-2xl font-semibold ">
+              My Skills
+              <span className="absolute h-[3px] w-8 left-0 bg-cyan-400 bottom-[-10px]"></span>
+            </h2>
+          </div>
+          <div className="py-3">
+            {skills.map((items, index) => (
+              <div className="skills-list  " key={index}>
+                <div className="flex justify-between mt-4">
+                  <p>{items.name}</p>
+                  <p>{items.percentage}%</p>
+                </div>
+                <div className="h-2 bg-white/10 rounded mt-1">
+                  <div
+                    className="h-full bg-blue-500 rounded-full"
+                    style={{ width: `${items.percentage}%` }}
+                  ></div>
+                </div>
               </div>
-              <div className="h-2 bg-white/10 rounded mt-1">
-                <div
-                  className="h-full bg-blue-500 rounded-full"
-                  style={{ width: `${items.percentage}%` }}
-                ></div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         <div className="to-do-section px-10 gap-4 flex flex-col">
-          <h3 className="text-2xl font-semibold ">What I Do</h3>
-          <div className="grid lg:grid-cols-2 gap-4">
+          <div>
+            <h2 className="relative text-2xl font-semibold ">
+              What I Do
+              <span className="absolute h-[3px] w-8 left-0 bg-cyan-400 bottom-[-10px]"></span>
+            </h2>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-4 py-3">
             <div
               className="web-card  rounded-xl border border-white/10 bg-[#111827]/30  text-center flex flex-col gap-2 py-3  "
               data-aos="fade-right"
@@ -262,9 +282,14 @@ function Dashboard() {
       </div>
       <div
         id="projects"
-        className="myprojects-section  bg-[#0B1120] text-white  px-12 py-10 flex flex-col scroll-mt-15"
+        className="myprojects-section  bg-[#0B1120] text-white  px-12 py-20 flex flex-col scroll-mt-15"
       >
-        <h2 className="text-3xl font-semibold text-center">My Projects</h2>
+        <div className="section text-center">
+          <h2 className=" relative text-3xl font-semibold  mt-0 inline-block">
+            My Projects
+            <span className="absolute h-[3px] w-8 bottom-[-10px] left-0  bg-cyan-400"></span>
+          </h2>
+        </div>
         {/* <div className="project-container "> */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-10">
           <div
@@ -400,18 +425,24 @@ function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center mt-9">
+        {/* <div className="flex justify-center mt-9">
           <button className="border py-3 px-15 rounded-lg w-fit hover:bg-blue-500 hover:border-blue-500 cursor-pointer">
             View All projects
           </button>
-        </div>
+        </div> */}
       </div>
       <div
         id="education"
         className=" bg-[#1a243b] grid lg:grid-cols-2 text-white px-12  scroll-mt-15 "
       >
         <div className="experience-section border-e border-r-white/10 px-5 ">
-          <h3 className="text-3xl font-semibold py-10">Experiece</h3>
+          <div className="py-10">
+            <h3 className="relative text-3xl font-semibold ">
+              Experiece
+              <span className="absolute h-[3px] w-8 bg-cyan-400 left-[0px] bottom-[-10px] "></span>
+            </h3>
+          </div>
+
           <p className="text-xl font-semibold">Fresher</p>
           <p className="">
             Currently I'm focusing on building
@@ -472,7 +503,12 @@ function Dashboard() {
       </div>
       <div className="getIntouch h-fit-content grid lg:grid-cols-3  text-white bg-[#0B1120] px-16 py-14  ">
         <div className="details  flex flex-col gap-3">
-          <h3 className="text-3xl font-semibold">Get In Touch</h3>
+          <div>
+            <h3 className="relative text-3xl font-semibold">
+              Get In Touch
+              <span className="absolute h-[3px] w-8 left-[0px] bottom-[-10px] bg-cyan-400"></span>
+            </h3>
+          </div>
           <p className="text-lg">
             Have a project in mind or want to work together?
             <br />
@@ -533,7 +569,7 @@ function Dashboard() {
           </form>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3  text-white bg-[#0B1120] px-16  ">
+      <div className="grid grid-cols-1 lg:grid-cols-3  text-white bg-[#0B1120] px-16 pb-6">
         <div className="">
           <h3 className="text-xl font-semibold flex items-center mb-2">
             <span className="text-blue-500 text-5xl">
@@ -593,6 +629,12 @@ function Dashboard() {
               </Link>
             </span>
           </div>
+        </div>
+      </div>
+      <div className="text-center  bg-[#0B1120] px-16 pb-6">
+        <hr className=" border-slate-700" />
+        <div className="flex  justify-center mt-2">
+          <p className="text-white/60">&copy; 2026 Diya Bora. All rights reserved.</p>
         </div>
       </div>
     </>
